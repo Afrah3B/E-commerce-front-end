@@ -1,0 +1,56 @@
+.news-letter{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0px 140px;
+    margin-bottom: 150px;
+    background: linear-gradient(0deg,#669996, white);
+    gap: 30px;
+}
+
+.news-letter h1{
+    color: #454545;
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.news-letter p{
+    color: #454545;
+    font-size: 20px;
+}
+
+.news-letter div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 600px;
+    height: 50px;
+    border-radius: 80px;
+    border: 1px solid #e3e3e3;
+}
+
+.email-input{
+    width: 500px;
+    margin-left: 30px;
+    border: none;
+    outline: none;
+    color: #616161;
+    font-size: 16px;
+}
+
+.news-letter div button{
+    width: 150px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 90px;
+    background-color: #669996;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}

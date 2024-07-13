@@ -1,0 +1,52 @@
+.offers{
+    height: 60vh;
+    display: flex;
+    margin: auto;
+    padding: 0px 140px;
+    margin-bottom: 150px;
+    background: linear-gradient(50deg,#8e43f0,white);
+}
+
+.offers-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offers-left h1{
+    color: #171717;
+    font-size: 80px;
+    font-weight: 500;
+}
+.offers-left p{
+    color: #171717;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.offers-left button{
+    width: 282px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: #431a79;
+    border: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.offers-right{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 50px;
+}
+
+.offers-svg{
+    height: 300px;
+    width: 300px;
+}
