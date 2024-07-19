@@ -24,4 +24,17 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 50px;
     gap: 30px;
+    padding: 10px;
+}
+
+@media(max-width:830px) {
+    .collections{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width:630px) {
+    .collections{
+        grid-template-columns: 1fr 1fr;
+    }
 }

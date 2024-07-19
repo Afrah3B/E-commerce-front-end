@@ -6,7 +6,7 @@
     justify-content: center;
     margin: auto;
     padding: 0px 140px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
     background: linear-gradient(0deg,#669996, white);
     gap: 30px;
 }
@@ -53,4 +53,53 @@
     color: white;
     font-size: 16px;
     cursor: pointer;
+}
+
+@media(max-width:1200px) {
+    .news-letter h1{
+        font-size: 35px;
+    }
+}
+@media(max-width:870px) {
+    .news-letter h1{
+        font-size: 25px;
+    }
+    
+    .news-letter p{
+        font-size: 18px;
+    }
+    
+    .news-letter div{
+        width: 400px;
+    }
+    
+    .email-input{
+        width: 300px;
+    }
+    
+    .news-letter div button{
+        width: 100px;
+    }
+}
+@media(max-width:702px) {
+    .news-letter h1{
+        font-size: 20px;
+    }
+    
+    .news-letter p{
+        font-size: 15px;
+    }
+    
+    .news-letter div{
+        width: 300px;
+    }
+    
+    .email-input{
+        width: 200px;
+    }
+}
+@media(max-width:630px) {
+    .news-letter{
+        padding: 0px 70px;
+    }
 }

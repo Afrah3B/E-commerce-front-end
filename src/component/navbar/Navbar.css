@@ -1,32 +1,35 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     padding: 16px;
 }
 
-.nav-logo{
+.nav-logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.nav-logo p{
+.nav-logo p {
     color: #171717;
     font-size: 20px;
     font-weight: 500;
 }
 
-.nav-menu{
+.nav-menu,
+.nav-menu-right {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 50px;
-    color:#626262;
+    color: #626262;
     font-size: 20px;
     font-weight: 500;
+    padding: 0px;
 }
 
-.nav-menu li{
+.nav-menu li ,
+.nav-menu-right li{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +39,7 @@
     transition: 0.4s ease-in-out;
 }
 
-.nav-list{
+.nav-list {
     background-color: rgb(157, 197, 157);
     color: rgb(49, 48, 47);
     border-radius: 20px;
@@ -45,27 +48,29 @@
     box-shadow: 0 1px 3px -2px black;
 }
 
-.search-svg{
-    margin:  0 0 -37px -240px;
+.search-svg {
+    margin: 0 0 -37px -240px;
 }
 
-.send-svg{
+.send-svg {
     display: none;
 }
 
-.send-svg-2{
+.send-svg-2 {
     display: block;
-    margin:  -33px -230px 0px 0px;
+    margin: -33px -230px 0px 0px;
     transition: .4s ease-in-out;
 }
 
-.send-svg-2:hover{
+.send-svg-2:hover {
     transform: rotate(45deg);
 }
-.input-search-none{
+
+.input-search-none {
     display: none;
 }
-.input-search{
+
+.input-search {
     height: 30px;
     width: 200px;
     color: #626262;
@@ -79,27 +84,80 @@
     display: block;
 }
 
-input:focus{
+input:focus {
     outline: transparent;
 }
 
-.nav-cart-count{
+.nav-cart-count {
     width: 18px;
     height: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: -20px 0 0 -65px;
+    margin: 0 0 0 18px;
     border-radius: 11px;
     font-size: 12px;
     background-color: red;
     color: white;
+    z-index: 2;
+    position: relative;
+}
+.cart{
+    margin: -20px 0 0 0;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
 
-.link:visited{
-    color:unset;
+.link:visited {
+    color: unset;
+}
+
+.nav-dropdown {
+    display: none;
+}
+
+@media(max-width:1130px) {
+    .navbar {
+        padding: 10px 0px;
+    }
+
+    .nav-dropdown {
+        display: block;
+        transition: .4s ease-in-out;
+        cursor: pointer;
+        margin:  0 20px 0 0;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        height: 280px;
+        width: 100%;
+        position: absolute;
+        background-color: white;
+        justify-content: center;
+        top: 60px;
+    }
+
+    .nav-menu-visible {
+        display: flex;
+    }
+
+    .nav-menu-right{
+        gap: 20px;
+    }
+
+}
+@media(max-width:670px) {
+    .input-search{
+        width: 100px;
+    }
+    .search-svg{
+        margin: 0 0 -37px -140px;
+    }
+    .send-svg-2{
+        margin: -33px -130px 0px 0px;
+    }
 }

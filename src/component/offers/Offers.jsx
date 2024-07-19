@@ -11,7 +11,7 @@ export const Offers = () => {
                 <p>Only On Best Sellers Products</p>
                 <button>Check Now</button>
             </div>
-            <div className="offers-riht">
+            <div className="offers-right">
                 <ImgBox className='offers-svg'/>
             </div>
         </div>

@@ -1,7 +1,8 @@
 .hero {
     background: linear-gradient(#eec2ed, white);
-    height: 80vh;
+    height: 95vh;
     display: flex;
+    flex-wrap: wrap-reverse;
 }
 
 .hero-left {
@@ -66,4 +67,22 @@
 .hero-right svg {
     height: 500px;
     width: 500px;
+}
+
+@media(max-width:1050px) {
+    .hero-left {
+        align-items: center;
+        padding-left: 0px;
+    }
+
+    .hero-right svg {
+        height: 300px;
+        width: 300px;
+    }
+}
+@media(max-width:650px) {
+    .hero-left {
+        justify-content:flex-start;
+        padding: 10px;
+    }
 }
