@@ -6,6 +6,7 @@ import { ReactComponent as Search } from '../assets/search.svg';
 import { ReactComponent as Send } from '../assets/send.svg';
 import { ReactComponent as UserCircle } from '../assets/user-circle.svg';
 import { ReactComponent as MenuIcon } from '../assets/menu.svg';
+import { ReactComponent as SignOut } from '../assets/signout.svg';
 import './Navbar.css';
 import { ShopContext } from '../../context/ShopContext';
 
@@ -22,6 +23,7 @@ export const Navbar = () => {
         }
         console.log('out if statement')
         e.target.classList.toggle('open');
+
     }
 
     return (
@@ -32,16 +34,16 @@ export const Navbar = () => {
             </div>
 
             <ul ref={menuRef} className="nav-menu">
-                <li className={menu === "home" ? "nav-list" : ""} onClick={() => { setmenu("home") }}>
+                <li className={menu === "home" ? "nav-list" : ""} onClick={() => { setmenu("home");menuRef.current.classList.remove('nav-menu-visible'); }}>
                     <Link to='/' className='link'>Home</Link>
                 </li>
-                <li className={menu === "shop" ? "nav-list" : ""} onClick={() => { setmenu("shop") }}>
+                <li className={menu === "shop" ? "nav-list" : ""} onClick={() => { setmenu("shop");menuRef.current.classList.remove('nav-menu-visible'); }}>
                     <Link to='/shop' className='link'>Shop</Link>
                 </li>
-                <li className={menu === "women" ? "nav-list" : ""} onClick={() => { setmenu("women") }}>
+                <li className={menu === "women" ? "nav-list" : ""} onClick={() => { setmenu("women");menuRef.current.classList.remove('nav-menu-visible'); }}>
                     <Link to='/women' className='link'>women</Link>
                 </li>
-                <li className={menu === "aboutus" ? "nav-list" : ""} onClick={() => { setmenu("aboutus") }}>
+                <li className={menu === "aboutus" ? "nav-list" : ""} onClick={() => { setmenu("aboutus");menuRef.current.classList.remove('nav-menu-visible'); }}>
                     About us
                 </li>
             </ul>
@@ -55,9 +57,12 @@ export const Navbar = () => {
                     <div className="nav-cart-count">{getTotalCartItems()}</div>
                     <Link to='/cart' className='link'><Cart className='cart'/></Link>
                 </li>
+                
+                {localStorage.getItem('auth-token')?
+                <SignOut className='link' onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace('/')}}></SignOut>:
                 <li onClick={() => { setmenu("signin") }}>
                     <Link to='/signin' className='link'><UserCircle /></Link>
-                </li>
+                </li>}
                 <li><MenuIcon className='nav-dropdown' onClick={dropdown_toggle} /></li>
             </ul>
         </div>

@@ -9,14 +9,14 @@ export const ProductDisplay = (props) => {
         <div className="productDisplay">
             <div className="productDisplay-left">
                 <div className="productDisplay-img-list">
-                    <product.image className='image' />
-                    <product.image className='image' />
-                    <product.image className='image' />
-                    <product.image className='image' />
+                    <img src={product.image} alt='' className='image' />
+                    <img src={product.image} alt='' className='image' />
+                    <img src={product.image} alt='' className='image' />
+                    <img src={product.image} alt='' className='image' />
                 </div>
                 <div className="productdisplay-img">
                     <div className="productdisplay-main-img">
-                        <product.image className='image' />
+                        <img src={product.image} alt='' className='image' />
                     </div>
                 </div>
             </div>

@@ -60,6 +60,7 @@
 .signinsignup-signin span{
     color: #6f2384;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .signinsignup-agree{

@@ -108,6 +108,7 @@ input:focus {
 
 .link {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .link:visited {

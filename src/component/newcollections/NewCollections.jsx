@@ -1,9 +1,17 @@
-import React from 'react'
-import new_collection from '../assets/newcollection'
+import React, { useEffect, useState } from 'react'
 import { Item } from '../item/Item'
 import './NewCollections.css'
 
 export const NewCollections = () => {
+    const [new_collection,setNew_collection]=useState([]);
+
+    useEffect(()=>{
+        fetch('http://localhost:4000/newcollections')
+        .then((res)=>res.json())
+        .then((data)=>{setNew_collection(data);})
+        .catch((error) => console.error('Error fetching products:', error));
+      },[]);
+
     return (
         <div className="new-collections">
             <h1>NEW COLLECTIONS</h1>

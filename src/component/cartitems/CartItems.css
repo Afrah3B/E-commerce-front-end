@@ -168,43 +168,6 @@
 }
 
 @media(max-width:650px) {
-    /* .cartitems-format-main{
-        display: grid;
-        grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
-        align-items: center;
-        gap: 75px;
-        padding: 20px 0px;
-        color: #454545;
-        font-size: 18px;
-        font-weight: 500;
-    }
-    
-    .cartitems-format{
-        font-size: 17px;
-        font-weight: 400;
-    }
-    
-    .carticon-product-icon{
-        height: 64px;
-        width: 64px;
-    }
-    
-    .cartitems-remove-icon{
-        margin: 0px 40px;
-        cursor: pointer;
-    }
-    
-    .cartitems-quantity{
-        width: 44px;
-        height: 30px;
-        border: 2px solid #bebebe;
-        border-radius: 5px;
-        background: #ffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
-    
     .cartitems-promobox{
         width: 100%;
     }

@@ -4,7 +4,7 @@ import { ShopContext } from '../../context/ShopContext'
 import { ReactComponent as RemoveIcon } from '../assets/delete.svg';
 
 export const CartItems = () => {
-    const {all_data, cartItems, removeFromCart , getTotalCartAmount } = useContext(ShopContext);
+    const {all_product, cartItems, removeFromCart , getTotalCartAmount } = useContext(ShopContext);
     return (
         <div className="cartitems">
             <div className="cartitems-format-main">
@@ -16,12 +16,12 @@ export const CartItems = () => {
                 <p>Remove</p>
             </div>
             <hr />
-            {all_data.map((e) => {
+            {all_product.map((e) => {
                 if (cartItems[e.id] > 0) {
                     return (
-                    <div>
+                    <div key={e.id}>
                         <div className="cartitems-format cartitems-format-main">
-                            <e.image className="carticon-product-icon"/>
+                            <img src={e.image} alt='' className="carticon-product-icon"/>
                             <p>{e.name}</p>
                             <p>${e.new_price}</p>
                             <div className='cartitems-quantity'>{cartItems[e.id]}</div>
